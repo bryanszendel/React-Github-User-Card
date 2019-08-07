@@ -8,7 +8,7 @@ const UserCard = props => {
       <Card.Content textAlign='left'>
         <Card.Header>{props.name}</Card.Header>
         <Card.Meta>
-          <span className='date'>Joined in {props.created}</span>
+          <span className='date'>Joined in {props.created === null ? '' : props.created.slice(0, 4)}</span>
         </Card.Meta>
         <Card.Description>{props.bio}</Card.Description>
       </Card.Content>
